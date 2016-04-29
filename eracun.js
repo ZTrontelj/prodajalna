@@ -61,7 +61,7 @@ streznik.get('/', function(zahteva, odgovor) {
           ORDER BY steviloProdaj DESC, pesem ASC \
           LIMIT 100", function(napaka, vrstice) {
     if (napaka)
-      odgovor.sendStatus(500);
+       odgovor.sendStatus(500);
     else {
         for (var i=0; i<vrstice.length; i++)
           vrstice[i].stopnja = davcnaStopnja(vrstice[i].izvajalec, vrstice[i].zanr);
